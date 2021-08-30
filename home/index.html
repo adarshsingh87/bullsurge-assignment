@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loan management | BullSurge | Adarsh</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="./home.css" media="print" onload="this.media='all'">
+</head>
+
+<body>
+  <nav class="navbar navbar-dark bg-dark">
+    <div class="container-fluid container">
+      <a class="navbar-brand">Logo</a>
+      <button class="btn btn-outline-danger" type="submit" onclick="location.href='../index.html'">Logout</button>
+    </div>
+  </nav>
+  <div class="container">
+    <div class="name-container">
+      <h1>Hi Adarsh</h1>
+      <button type="button" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#exampleModal">New Loan</button>
+    </div>
+    <!-- loan table -->
+    <div class="loan-table-container">
+      <table id='tableContents'>
+        <thead>
+          <tr>
+            <td>Applicant Name</td>
+            <td>Loan Amount</td>
+            <td>Loan Start Date</td>
+            <td>Loan End Date</td>
+            <td>Loan EMI</td>
+            <td>Fixed/FLoating</td>
+            <td>Status</td>
+          </tr>
+        </thead>
+        <tr>
+          <td>Adarsh S</td>
+          <td>100000</td>
+          <td>10-10-2021</td>
+          <td>10-10-2025</td>
+          <td>100</td>
+          <td>Fixed</td>
+          <td class="success">Success</td>
+        </tr>
+        <tr>
+          <td>Mohit C</td>
+          <td>1000000000</td>
+          <td>10-10-2021</td>
+          <td>10-10-2025</td>
+          <td>10</td>
+          <td>Fixed</td>
+          <td class="rejected">Rejected</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row g-3">
+            <div class="col-md-6">
+              <label for="firstName" class="form-label">First Name</label>
+              <input required type="text" class="form-control" id="firstName">
+            </div>
+            <div class="col-md-6">
+              <label for="lastName" class="form-label">Last Name</label>
+              <input required type="text" class="form-control" id="lastName">
+            </div>
+            <div class="col-md-6">
+              <label for="inputEmail4" class="form-label">Email</label>
+              <input required type="email" class="form-control" id="inputEmail4">
+            </div>
+            <div class="col-md-6">
+              <label for="inputPhnumber" class="form-label">Ph number</label>
+              <input required type="number" class="form-control" id="inputPhnumber">
+            </div>
+            <div class="col-12">
+              <label for="inputAddress" class="form-label">Address</label>
+              <input required type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+            </div>
+            <div class="col-12">
+              <label for="inputAddress2" class="form-label">Address 2</label>
+              <input required type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+            </div>
+            <div class="col-md-6">
+              <label for="inputCity" class="form-label">City</label>
+              <input required type="text" class="form-control" id="inputCity">
+            </div>
+            <div class="col-md-4">
+              <label for="inputState" class="form-label">State</label>
+              <select id="inputState" class="form-select">
+                <option selected>Choose...</option>
+                <option>...</option>
+              </select>
+            </div>
+            <div class="col-md-2">
+              <label for="inputZip" class="form-label">Zip</label>
+              <input required type="number" class="form-control" id="inputZip">
+            </div>
+            <div class="col-md-6">
+              <label for="loanAmount" class="form-label">Loan Amount</label>
+              <input required type="number" class="form-control" id="loanAmount">
+            </div>
+            <div class="col-md-6">
+              <label for="loanEmi" class="form-label">Loan EMI</label>
+              <input required type="number" class="form-control" id="loanEmi">
+            </div>
+            <div class="col-md-6">
+              <label for="startDate" class="form-label">Start Date</label>
+              <input required type="date" class="form-control" id="startDate">
+            </div>
+            <div class="col-md-6">
+              <label for="endDate" class="form-label">End Date</label>
+              <input required type="date" class="form-control" id="endDate">
+            </div>
+            <div class="col-12">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="floatingStyleLoan">
+                <label class="form-check-label" for="floatingStyleLoan">
+                  FLoating style loan
+                </label>
+              </div>
+            </div>
+            <div class="col-12">
+              <button onclick="SubmitForm()" class="btn btn-primary">Add Loan</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="../script.js"></script>
+</body>
+
+</html>

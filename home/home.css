@@ -1,0 +1,44 @@
+.name-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+
+.loan-table-container {
+  overflow-x: auto;
+  margin-top: 50px;
+}
+
+table, td, th {
+  border: 1px solid black;
+}
+
+td {
+  box-sizing: border-box;
+  padding: 10px;
+  white-space:nowrap;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.modal-dialog {
+  max-width: 700px;
+}
+
+.success {
+  font-weight: bold;
+  color: green;
+}
+
+.rejected {
+  font-weight: bold;
+  color: red;
+}
+
+.pending {
+  font-weight: bold;
+  color: #FFC107;
+}
